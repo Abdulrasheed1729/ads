@@ -1,4 +1,7 @@
-use ads::string_basics::{generate_dna_sequence, longest_common_prefix, reverse_complement};
+use ads::{
+    genome::Genome,
+    string_basics::{generate_dna_sequence, longest_common_prefix, reverse_complement},
+};
 
 fn main() {
     let seq1 = generate_dna_sequence(9);
@@ -16,4 +19,12 @@ fn main() {
         "Is reverse complement working: {}",
         reverse_complement(&reverse_complement(&seq1)) == seq1.clone()
     );
+
+    let fasta_file = "lambda_virus.fa";
+
+    let genome = Genome::new(fasta_file);
+
+    println!("Genome Sequence: {}", genome.sequence);
+    println!("Length: {}", genome.sequence);
+    println!("Counts: {:?}", genome.get_counts());
 }
