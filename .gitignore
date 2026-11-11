@@ -14,3 +14,4 @@ wheels/
 # Added by cargo
 
 /target
+cmake-build-debug/
