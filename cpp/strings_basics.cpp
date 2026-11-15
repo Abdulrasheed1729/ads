@@ -206,5 +206,10 @@ auto main() -> int
         std::println("{}/{} phix_reads matched exactly", num_matched, phix_reads.size());
     }
 
+    {
+        std::string str = "abracadabra";
+        std::print("z-values for {} are {}", str, compute_z_array(str));
+    }
+
     return 0;
 }
